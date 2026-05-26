@@ -48,55 +48,24 @@ Attr7 → EBIT / Total assets
 Attr27 → Profit on operating activities / Financial expenses
 Attr29 → Logarithm of total assets
 
-Feature definitions are stored in:
-
-Data_dictionary.txt
-Project Structure
-CompanyBankruptcyML/
-│
-├── data/
-│   ├── polish+companies+bankruptcy+data/
-│   │   ├── 1year.arff
-│   │   ├── 2year.arff
-│   │   ├── 3year.arff
-│   │   ├── 4year.arff
-│   │   └── 5year.arff
-│   │
-│   └── poland_df.csv
-│
-├── models/
-│   ├── model_dt.pkl
-│   ├── model_dt2.pkl
-│   ├── model_rf.pkl
-│   ├── model_boost.pkl
-│   └── model_xgb.pkl
-│
-├── loaddata.ipynb
-├── EDA.ipynb
-├── bankruptcy_prediction_binaryclassification.ipynb
-├── bankruptcy_prediction_multi_clasiification.ipynb
-├── ExplainableAI.ipynb
-├── Data_dictionary.txt
-├── requirements.txt
-└── README.md
-
+Feature definitions are stored in: Data_dictionary.txt
 
 Notebook Workflow
 1. Data Loading
 Notebook:loaddata.ipynb
 
 Tasks performed:
-Loads all ARFF files
-Merges yearly datasets
-Creates target labels
+Loads all ARFF files,
+Merges yearly datasets,
+Creates target labels,
 Saves dataset as poland_df.csv
 
 2. Exploratory Data Analysis (EDA)
 Notebook:EDA.ipynb
 Tasks performed:
-Class imbalance visualization
-Correlation analysis
-Outlier detection
+Class imbalance visualization,
+Correlation analysis,
+Outlier detection,
 Feature distribution analysis
 
 4. Binary Classification
@@ -105,16 +74,16 @@ Notebook:bankruptcy_prediction_binaryclassification.ipynb
 Goal: Predict whether a company is bankrupt or healthy.
 
 Models used:
-Logistic Regression
-Random Forest
+Logistic Regression,
+Random Forest,
 XGBoost
 
 Key preprocessing steps:
-Missing value handling
-Median imputation
-Feature scaling
-IQR Winsorization
-Feature selection
+Missing value handling,
+Median imputation,
+Feature scaling,
+IQR Winsorization,
+Feature selection,
 SMOTE oversampling
 
 Evaluation metrics:
@@ -127,21 +96,21 @@ Notebook: bankruptcy_prediction_multi_clasiification.ipynb
 Goal: Predict the number of years before bankruptcy.
 
 Models used:
-Decision Tree
-Random Forest
-Gradient Boosting
+Decision Tree,
+Random Forest,
+Gradient Boosting,
 XGBoost
 
 Techniques used:
-RandomOverSampler
-GridSearchCV
-Stratified Cross Validation
+RandomOverSampler,
+GridSearchCV,
+Stratified Cross Validation,
 Scikit-learn Pipelines
 
 Evaluation metrics:
-Accuracy
-Weighted F1 Score
-ROC-AUC One-vs-Rest
+Accuracy,
+Weighted F1 Score,
+ROC-AUC One-vs-Rest,
 
 5. Explainable AI
 Notebook: ExplainableAI.ipynb
@@ -149,15 +118,15 @@ Notebook: ExplainableAI.ipynb
 Explainability tools:
 SHAP:
 Used for:
-Global feature importance
-Beeswarm plots
-Heatmaps
+Global feature importance,
+Beeswarm plots,
+Heatmaps,
 Waterfall plots
 
 LIME:
 Used for:
-Local prediction explanations
-Bankrupt company analysis
+Local prediction explanations,
+Bankrupt company analysis,
 Healthy company analysis
 
 
@@ -168,7 +137,7 @@ SMOTE (Synthetic Minority Oversampling Technique)
 
 Multi-Class Classification
 Technique used:
-RandomOverSampler
+RandomOverSampler,
 Oversampling is applied only to training data to prevent data leakage.
 
 Machine Learning Models:
